@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:background="?android:attr/listDivider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/portada"
+            android:layout_width="50dp"
+            android:layout_height="49dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="49dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nombreTV"
+                android:layout_width="266dp"
+                android:layout_height="23dp"
+                android:layout_marginLeft="5sp"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/artistaTV"
+                android:layout_width="266dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:layout_marginBottom="0dp"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/imagenQuitar"
+            android:layout_width="45dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:scaleType="fitEnd"
+            app:srcCompat="@drawable/quitar3"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <CheckBox
+            android:id="@+id/itemCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:checked="false"
+            android:visibility="visible"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+</LinearLayout>

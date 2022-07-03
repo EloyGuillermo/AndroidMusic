@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/avatar"
+        android:icon="@drawable/avatar"
+        android:title="avatar"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/itemNombreUsuario"
+        android:title="titulo"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/cancionesItem"
+        android:icon="@drawable/canciones"
+        app:showAsAction="always"
+        android:title="TODO" />
+    <item
+        android:id="@+id/listaCancionesItem"
+        android:title="Lista de Canciones" />
+    <item
+        android:id="@+id/itemCerrarSesion"
+        android:title="Cerrar Sesión" />
+    <item
+        android:id="@+id/itemSalir"
+        android:title="Salir" />
+</menu>

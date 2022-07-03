@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background3"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/imagenVolver"
+        android:layout_width="42dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:onClick="volver"
+        android:scaleType="fitCenter"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/volver"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/imagenAvatar2"
+        android:layout_width="93dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="25dp"
+        android:onClick="abrirGaleria"
+        android:scaleType="fitCenter"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/botonLogin"
+        app:layout_constraintStart_toEndOf="@+id/avatarTV"
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:srcCompat="@drawable/avatar" />
+
+    <TextView
+        android:id="@+id/videoTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/archivo_black"
+        android:text="Vídeo:"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/botonLogin"
+        app:layout_constraintStart_toEndOf="@+id/imagenAvatar2"
+        app:layout_constraintTop_toBottomOf="@+id/imagenCalendario"
+        app:layout_constraintVertical_bias="0.344" />
+
+    <EditText
+        android:id="@+id/nombreET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/botonRegistro"
+        android:layout_width="151dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="sans-serif-black"
+        android:onClick="registrarse"
+        android:text="Registrarse"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonLogin"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/botonLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="sans-serif-black"
+        android:onClick="login"
+        android:text="Iniciar Sesión"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/botonGrabar"
+        android:layout_width="101dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="sans-serif-black"
+        android:onClick="recordVideo"
+        android:text="Grabar"
+        android:textColor="@color/black"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.674"
+        app:layout_constraintStart_toEndOf="@+id/botonLogin"
+        app:layout_constraintTop_toBottomOf="@+id/videoView" />
+
+    <EditText
+        android:id="@+id/usernameET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreET"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/passwordET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameET"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <CheckBox
+        android:id="@+id/mujerCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="100dp"
+        android:text="Mujer"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hombreCB" />
+
+    <CheckBox
+        android:id="@+id/hombreCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="98dp"
+        android:text="Hombre"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.611"
+        app:layout_constraintStart_toEndOf="@+id/generoTV"
+        app:layout_constraintTop_toBottomOf="@+id/passwordET" />
+
+    <TextView
+        android:id="@+id/generoTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="57dp"
+        android:fontFamily="@font/archivo_black"
+        android:text="Género:"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordET" />
+
+    <ImageButton
+        android:id="@+id/imagenCalendario"
+        android:layout_width="66dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginBottom="112dp"
+        android:onClick="establecerFecha"
+        android:scaleType="fitCenter"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/botonLogin"
+        app:layout_constraintStart_toEndOf="@+id/avatarTV"
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:srcCompat="@drawable/calendar" />
+
+    <TextView
+        android:id="@+id/avatarTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="56dp"
+        android:fontFamily="@font/archivo_black"
+        android:text="Avatar:"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/botonLogin"
+        app:layout_constraintEnd_toStartOf="@+id/imagenCalendario"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="93dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="77dp"
+        android:layout_marginEnd="30dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.858"
+        app:layout_constraintStart_toEndOf="@+id/videoTV"
+        app:layout_constraintTop_toBottomOf="@+id/imagenCalendario" />
+
+    <EditText
+        android:id="@+id/fechaNacimiento"
+        android:layout_width="164dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="48dp"
+        android:clickable="false"
+        android:editable="false"
+        android:ems="10"
+        android:enabled="false"
+        android:hint="Fecha Nacimiento"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/imagenAvatar2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/generoTV"
+        app:layout_constraintVertical_bias="0.707" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
